@@ -126,10 +126,10 @@ nav {
         opacity:1;
     }
     .bars {
-        width: 1.5rem;
+        width: 2rem;
         opacity: 0;
         position: absolute;
-        top: 23px;
+        top: 2.5rem;
         right: 30px;
         cursor: pointer;
         @include five {
@@ -146,7 +146,7 @@ nav {
 
 
     @include five {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 66px;
     }
 
@@ -156,6 +156,7 @@ nav {
     z-index: 1;
     display: flex;
     list-style: none;
+    align-items:center;
     transition:0.25s ease-in-out;
     @include five{
         font-size: 0.9rem;
@@ -560,9 +561,11 @@ nav {
             position: relative;
             width: 100%;
             height: 100%;
-            padding: 2rem 0rem;
+            padding: 3rem 0rem;
             display: flex;
             flex-direction: row;
+
+    
 
             @include seven {
                 flex-wrap: wrap;
@@ -577,13 +580,6 @@ nav {
                 &:hover {
                     transform: translateY(-5%);
                 }
-
-                img {
-                    background-size: cover;
-                    background-position: center;
-                    height: 20rem;
-                }
-
                 &.box1{
                     animation: first-box 1.5s ease-in-out;
                  }
@@ -604,14 +600,6 @@ nav {
             #second-box {
                 opacity: 1;
                 transition: 0.5s ease-in-out;;
-
-                    img {
-                        background-size: cover;
-                        background-position: center;
-                        height: 20rem;
-
-                    }
-
 
                    &:hover {
                         transform: translateY(-5%);
@@ -642,8 +630,6 @@ nav {
                         transform: translateY(-5%);
                     }
 
-
-
                 &.box3{
                     animation: third-box 2s ease-in-out;
                  }
@@ -658,27 +644,29 @@ nav {
                          transform: translateY(0%);
                      }
                  }
-            }
-
-            
+            }   
 
          
                 .box {
                     background: white;
                     width: 100%;
                     height: 100%;
-                    padding: 0.8rem;
-                    margin: 1rem 0.7rem;
+                    padding: 0.5rem;
+                    margin: 0.5rem 0.7rem;
                     position: relative;
                     box-shadow: 0 6px 9px rgba(0,0,0,0.2);
 
                     @include seven {
-                        margin: 1rem 0.3em;
+                        margin: 1rem;
+                        padding: 0.7rem;
                     }
 
                     .img {
-                        width: 100%;
-                        height: 100%;
+                        max-width: 100%;
+                        height: auto;
+                        background-size: cover;
+                        background-position: center;
+                        height: 23rem;
                     }
 
                         .contentin {
