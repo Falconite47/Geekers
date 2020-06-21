@@ -37,18 +37,22 @@ html {
 body {
     font-family:"Poppins", sans-serif;
     overflow-x: hidden;
+
+    @include five {
+        overflow-x: hidden;
+    }
 }   
 
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     padding: 1rem 4rem;
     min-height: 10vh;
-    align-items: center;
     transition: 0.20s ease-in-out;
     z-index: 10;
     animation: navss ease-in-out 0.5s;
@@ -85,7 +89,7 @@ nav {
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        
+        padding: 0.5rem 4rem;
     }
 
 
@@ -96,7 +100,7 @@ nav {
         box-shadow: 0 3px 11px rgba(0,0,0,0.3);
         
         @include seven {
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
     }
     
@@ -173,6 +177,8 @@ nav {
         max-height: 0;
         width: 100%;
         overflow: hidden;
+        align-items:center;
+        justify-content: flex-start;
         display: flex;
         flex-direction: column;
     }
@@ -181,7 +187,7 @@ nav {
             
             li{
                 @include five { 
-                    padding: 40px 0;
+                    padding: 35px 0;
                     text-align: center !important;    
                 }
                 
@@ -667,6 +673,10 @@ nav {
                         background-size: cover;
                         background-position: center;
                         height: 23rem;
+
+                        @include five {
+                            height: 20rem;;
+                        }
                     }
 
                         .contentin {
