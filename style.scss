@@ -1,0 +1,816 @@
+@mixin seven{
+    @media (max-width: 1000px) { @content};
+}
+
+@mixin five {
+    @media (max-width: 500px) {@content};
+}
+  
+@mixin thousand{
+    @media (max-width: 1200px) { @content};
+  }
+  
+@mixin desktop {
+    @media(min-width: 1366px) {@content};
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span {
+    color: #0057fa;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:"Poppins", sans-serif;
+    overflow-x: hidden;
+}   
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 4rem;
+    min-height: 10vh;
+    align-items: center;
+    transition: 0.20s ease-in-out;
+    z-index: 10;
+    animation: navss ease-in-out 0.5s;
+    
+    h1{
+        @include seven {
+            padding: 20px 0;
+        }
+    }
+    
+    @keyframes navss {
+        0%{
+            transform: translateY(-50%);
+        }
+        70%{
+            transform: translateY(5%);
+        }
+        80%{
+            transform: translateY(-5%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    
+    @include five {
+        background: linear-gradient(90deg,#0057fa,#0077ff);
+        color: white;
+        animation: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+
+
+
+    &.navs{
+        background: linear-gradient(90deg,#0057fa,#0077ff);
+        padding: 0rem 2.5rem;
+        box-shadow: 0 3px 11px rgba(0,0,0,0.3);
+        
+        @include seven {
+            padding: 0 1.5rem;
+        }
+    }
+    
+    &.navs .title, &.navs .nav-links li a{
+        color: white;
+    }
+
+    &.navs .nav-links li a:before {
+        background: white;
+    }
+    
+    @include seven {
+        padding: 0 2rem;           
+    }
+    
+    
+    
+}
+
+
+.p-bar{
+    opacity: 0;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    @include five {
+        opacity:1;
+    }
+    .bars {
+        width: 1.5rem;
+        opacity: 0;
+        position: absolute;
+        top: 23px;
+        right: 30px;
+        cursor: pointer;
+        @include five {
+            opacity: 1;
+        }
+    }
+
+}
+
+.title {
+    z-index: 1;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+
+    @include five {
+        font-size: 1.5rem;
+        line-height: 66px;
+    }
+
+}
+
+.nav-links {
+    z-index: 1;
+    display: flex;
+    list-style: none;
+    transition:0.25s ease-in-out;
+    @include five{
+        font-size: 0.9rem;
+    }
+    
+    &.idknav{
+            padding-top: 3rem;
+            max-height: 70vh;
+            transition:0.25s ease-in-out;
+    }
+
+    @include five{
+        height: 70vh;
+        max-height: 0;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+            
+            li{
+                @include five { 
+                    padding: 40px 0;
+                    text-align: center !important;    
+                }
+                
+                
+                
+                a{
+                    color: black;
+                    text-decoration: none;  
+                    padding:0.5rem 0rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    margin-left: 2rem;
+                    font-weight: 600;
+                    transition: 0.25s ease-in-out;
+                    position: relative;
+                    
+                    &:hover:before {
+                        transform: scaleX(1);
+                    }
+                    
+                    &:before {
+                        content:"";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: black;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: 0.25s ease-in-out;
+                        
+                        @include five {
+                            background: white;
+                            text-align: center !important;
+                        }
+                        
+                    }
+                    
+                    @include five {
+                        font-size: 1.5rem;
+                        color: white;
+                    }
+
+                    }
+                }
+     }
+
+.hero{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items:center;
+    height: 100vh;
+    z-index: 2;
+    width: 100%;
+    padding: 3rem 4rem;
+   
+    background: white;
+
+    @include seven {
+        padding:  7rem 0rem 5rem 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height:100%;
+    }
+
+    .front-cover {
+       order: 2;
+       position: relative;
+       width: 100%;
+       height: 100%;
+       padding: 3rem 2rem;
+       animation: img-hero 0.60s ease-in-out;
+
+       @include desktop {
+           width: 80%;
+           height: 70%;
+       }
+
+       @include thousand {
+        width: 70%;
+        padding: 1rem 0;
+        height: 70%;
+       }
+
+        @include five {
+            padding: 3rem 0;
+            height: 100%;
+        }
+
+       @keyframes img-hero {
+        0%{
+            transform: translateX(50%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+       
+       
+    @include seven {
+        order:1;
+        animation: none;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: relative;
+        object-fit: cover;
+        object-position: center center;
+    
+    @include thousand {
+        margin: 0;
+    }
+                
+    @include seven {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    }
+ }
+
+    .front-desc {
+        order: 1;
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 3;
+        animation: desc-hero 0.60s ease-in-out;
+
+        @include thousand{
+            padding: 0 0.4rem;
+        }
+
+
+        @keyframes desc-hero {
+            0%{
+                transform: translateX(-50%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        
+    @include seven {
+        order:2;
+        padding:1rem 2rem;
+        animation: none;
+    }
+
+    
+           #abm{
+                padding:0.7rem 0rem;
+                text-decoration: none;
+                font-weight:600;
+                text-align: center;
+                background: linear-gradient(90deg,#0057fa,#0077ff);
+                border: none;
+                max-width: 25%;
+                outline: none;
+                color: white;
+                border-radius: 4px;
+                font-size: 1rem;
+                margin: 0.8rem 0;
+                cursor: pointer;
+
+                #abm:hover {
+                    animation: colors 0.5s ease-in-out infinite;
+                }
+
+                @include seven {
+                    display: block;
+                    max-width: 100%;
+                    margin-top: 1rem;
+                    padding:0.8rem 0;
+                 }
+            }   
+
+            h2 {
+                
+                font-size: 3.5em;
+                line-height: 65px;
+
+                @include seven {
+                   font-size: 2rem;
+                }
+            }
+
+    }
+}
+
+.about {
+    background: white;
+    position: relative;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    position: relative;
+    
+    @include seven {
+        flex-wrap: wrap;
+        padding: 5rem 2rem;
+    }
+
+
+    
+     
+        .text{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        
+            
+            &.firsts {
+                animation: first 0.75s ease-in-out;
+                    @include seven {
+                       animation: none;
+                    }
+            }
+         
+            @keyframes first {
+                0%{
+                    transform: translateX(-50%);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+            }
+
+            h2{
+                font-size: 4rem;
+                padding: 0;
+                
+
+                @include seven {
+                    font-size: 2.5rem;
+                }
+          
+
+              }
+
+              p{
+                  font-size:1.1rem;
+                  padding-right: 0.5rem;
+                  padding-bottom: 0rem;
+
+                  @include seven {
+                      font-size: 1.1rem;
+                      margin-top: 0.5rem;
+                      padding-bottom: 3rem;
+                }
+              }
+        }
+
+        .pic{
+            padding: 0 0 0 2rem;
+            position: relative;
+            width: 35%;
+            height: 100%;
+            transition: 0.25s ease-in-out;
+            opacity: 1;
+
+            &.seconds{
+                animation: second 0.75s ease-in-out;
+
+                @include seven {
+                    animation: none;
+                 }
+             }
+          
+             @keyframes second {
+                 0%{
+                     opacity: 0;
+                     transform: translateX(50%);
+                 }
+                 100%{
+                    opacity: 1;
+                     transform: translateX(0);
+                 }
+             }
+            @include seven {
+               width: 70%;
+               padding: 0rem;
+             }
+
+            img{
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            transition: 0.25s ease-in-out;
+            position: relative;
+ 
+            }
+        }
+
+}
+
+.best {
+    position: relative; 
+    width: 100%;
+    height: auto;
+    background:url('Back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .opac {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.8;
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 4rem;
+     
+        @include seven {    
+            padding: 2rem 0rem;
+        } 
+
+        #best-title{
+            padding: 1rem 0;
+            font-size: 3.5rem;
+            color: white;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            
+            h2 {
+                text-align: center;
+                font-size: 4rem;
+
+                @include seven {
+                    font-size: 3rem;
+                }
+            }
+
+
+            &.titles{
+               animation: btitle 1s ease-in-out;
+            }
+
+            @keyframes btitle {
+                0%{
+                    opacity: 0.5;
+                    transform: translateY(-50%);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+
+        }
+
+        .contenttoo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 0rem;
+            display: flex;
+            flex-direction: row;
+
+            @include seven {
+                flex-wrap: wrap;
+                padding: 1rem 1rem;
+            }
+
+            #first-box {
+                opacity: 1;
+                cursor:pointer;
+                transition: 0.5s ease-in-out;;
+
+                &:hover {
+                    transform: translateY(-5%);
+                }
+
+                img {
+                    background-size: cover;
+                    background-position: center;
+                    height: 20rem;
+                }
+
+                &.box1{
+                    animation: first-box 1.5s ease-in-out;
+                 }
+     
+                 @keyframes first-box {
+                     0%{
+                         opacity: 0;
+                         transform: translateY(50%);
+                     }
+                     100%{
+                         opacity: 1;
+                         transform: translateY(0%);
+                     }
+                 }
+            }
+
+            
+            #second-box {
+                opacity: 1;
+                transition: 0.5s ease-in-out;;
+
+                    img {
+                        background-size: cover;
+                        background-position: center;
+                        height: 20rem;
+
+                    }
+
+
+                   &:hover {
+                        transform: translateY(-5%);
+                    }
+
+                &.box2{
+                    animation: second-box 1.75s ease-in-out;
+                 }
+     
+                 @keyframes second-box {
+                     0%{
+                         opacity: 0;
+                         transform: translateY(50%);
+                     }
+                     100%{
+                         opacity: 1;
+                         transform: translateY(0%);
+                     }
+                 }
+            }
+
+            
+            #third-box {
+                opacity: 1;
+                transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-5%);
+                    }
+
+
+
+                &.box3{
+                    animation: third-box 2s ease-in-out;
+                 }
+     
+                 @keyframes third-box {
+                     0%{
+                         opacity: 0;
+                         transform: translateY(50%);
+                     }
+                     100%{
+                         opacity: 1;
+                         transform: translateY(0%);
+                     }
+                 }
+            }
+
+            
+
+         
+                .box {
+                    background: white;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.8rem;
+                    margin: 1rem 0.7rem;
+                    position: relative;
+                    box-shadow: 0 6px 9px rgba(0,0,0,0.2);
+
+                    @include seven {
+                        margin: 1rem 0.3em;
+                    }
+
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                        .contentin {
+                           padding: 0.5rem 0;
+
+                                p {
+                                    font-size: 0.8rem;
+                                }
+                            
+                        }
+
+                }
+        }
+
+        }
+
+}
+
+.contact{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: white;
+
+    
+    .content {
+        padding:  4rem;
+        text-align:left;
+        
+        @include seven {
+           padding: 1.5rem 1rem;
+          }
+
+        .text {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 1rem 0 0 0;
+
+            @include seven {
+                padding: 0.5rem 0 0 0 ;
+            }
+
+        }
+        
+
+            .icons {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding: 1rem;
+                margin: 2rem 0;
+                flex-wrap: wrap;
+                
+                @include seven {
+                    padding: 0rem 1rem;
+                    justify-content: start;
+            }
+
+                .sec {
+                    padding:1.5rem 1rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    text-align: left;
+
+                    @include seven {
+                        padding: 0.8rem 1rem;
+                    }
+
+                    img {
+                        width: 2rem;
+                        margin: 0 1rem;
+                    }
+                }
+
+            }
+
+    }
+
+}
+
+footer {
+    position: relative;
+    background: #161515;
+    color: #979797;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 4rem;
+      
+
+        @include seven {
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .links {
+            padding: 0.8rem 0;
+            display: flex;
+            
+            @include seven {
+                margin: 0 auto;
+                padding: 0.5rem 0;
+            }
+
+            .sec {
+                display: flex;
+                align-items: center;
+                @include seven {
+                    margin: 1rem 0;
+                }
+
+                img {
+                    width: 1.5rem;
+                    margin: 0.5rem;
+                    cursor:pointer;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 0.8rem;
+
+            @include seven {
+                padding-bottom: 1rem;
+            }
+        }
+
+    }
+
+}
