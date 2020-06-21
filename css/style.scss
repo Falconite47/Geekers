@@ -493,7 +493,7 @@ nav {
     position: relative; 
     width: 100%;
     height: auto;
-    background:url('Back.jpg');
+    background:url('img/Back.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -512,7 +512,7 @@ nav {
         position: relative;
         width: 100%;
         height: 100%;
-        padding: 4rem;
+        padding: 2rem 4rem;
      
         @include seven {    
             padding: 2rem 0rem;
