@@ -240,7 +240,7 @@ nav {
 .hero{
     display: flex;
     position: relative;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:center;
     height: 100vh;
     z-index: 2;
@@ -259,14 +259,14 @@ nav {
     .front-cover {
        order: 2;
        position: relative;
-       width: 100%;
-       height: 100%;
-       padding: 3rem 2rem;
+       width: 85%;
+       height: 85%;
+       padding: 0rem 1rem;
        animation: img-hero 0.60s ease-in-out;
 
        @include desktop {
-           width: 80%;
-           height: 70%;
+           width: 85%;
+           height: 83%;
        }
 
        @include thousand {
@@ -276,8 +276,7 @@ nav {
        }
 
         @include five {
-            padding: 3rem 0;
-            height: 100%;
+            height: 80%;
         }
 
        @keyframes img-hero {
@@ -292,6 +291,7 @@ nav {
        
        
     @include seven {
+        height: 80%;
         order:1;
         animation: none;
     }
@@ -380,7 +380,7 @@ nav {
 
             h2 {
                 
-                font-size: 3.5em;
+                font-size: 4em;
                 line-height: 65px;
                 font-weight:bold;
 

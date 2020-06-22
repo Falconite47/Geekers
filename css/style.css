@@ -312,8 +312,9 @@ nav.navs .nav-links li a:before {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -342,17 +343,17 @@ nav.navs .nav-links li a:before {
       -ms-flex-order: 2;
           order: 2;
   position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 3rem 2rem;
+  width: 85%;
+  height: 85%;
+  padding: 0rem 1rem;
   -webkit-animation: img-hero 0.60s ease-in-out;
           animation: img-hero 0.60s ease-in-out;
 }
 
 @media (min-width: 1366px) {
   .hero .front-cover {
-    width: 80%;
-    height: 70%;
+    width: 85%;
+    height: 83%;
   }
 }
 
@@ -366,8 +367,7 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .hero .front-cover {
-    padding: 3rem 0;
-    height: 100%;
+    height: 80%;
   }
 }
 
@@ -395,6 +395,7 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 1000px) {
   .hero .front-cover {
+    height: 80%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -523,7 +524,7 @@ nav.navs .nav-links li a:before {
 }
 
 .hero .front-desc h2 {
-  font-size: 3.5em;
+  font-size: 4em;
   line-height: 65px;
   font-weight: bold;
 }
