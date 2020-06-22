@@ -51,18 +51,15 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1rem 4rem;
+    padding: 0.5rem 4rem;
     min-height: 10vh;
     transition: 0.20s ease-in-out;
     z-index: 10;
     animation: navss ease-in-out 0.5s;
     
     h2{
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
         @include seven {
-            padding: 20px 0;
+            padding: 15px 0;
         }
     }
     
@@ -89,7 +86,7 @@ nav {
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        padding: 0.5rem 4rem;
+        padding: 0rem 4rem;
     }
 
 
@@ -133,7 +130,7 @@ nav {
         width: 2rem;
         opacity: 0;
         position: absolute;
-        top: 2.5rem;
+        top: 2.3rem;
         right: 30px;
         cursor: pointer;
         @include five {
@@ -145,12 +142,12 @@ nav {
 
 .title {
     z-index: 1;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
 
 
     @include five {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         line-height: 66px;
     }
 
@@ -167,13 +164,13 @@ nav {
     }
     
     &.idknav{
-            padding-top: 3rem;
-            max-height: 70vh;
+            padding-top: 0rem;
+            max-height:60vh;
             transition:0.25s ease-in-out;
     }
 
     @include five{
-        height: 70vh;
+        height: 60vh;
         max-height: 0;
         width: 100%;
         overflow: hidden;
@@ -187,7 +184,7 @@ nav {
             
             li{
                 @include five { 
-                    padding: 35px 0;
+                    padding: 40px 0;
                     text-align: center !important;    
                 }
                 
@@ -710,11 +707,20 @@ nav {
            padding: 1.5rem 1rem;
           }
 
+         @include five {
+             padding: 1.5rem 2rem;
+         } 
+
         .text {
             text-align: center;
             font-size: 3rem;
             font-weight: bold;
             padding: 1rem 0 0 0;
+
+            @include five {
+                font-size: 2.5rem;
+                padding: 2rem 0 0 0;
+            }
 
             @include seven {
                 padding: 0.5rem 0 0 0 ;
@@ -727,7 +733,7 @@ nav {
                 position: relative;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content:center;
                 align-items: center;
                 width: 100%;
                 height: 100%;
@@ -738,7 +744,11 @@ nav {
                 @include seven {
                     padding: 0rem 1rem;
                     justify-content: start;
-            }
+                }
+
+                @include five {
+                    flex-direction: column;
+                }
 
                 .sec {
                     padding:1.5rem 1rem;
@@ -746,6 +756,10 @@ nav {
                     align-items: center;
                     font-size: 1.5rem;
                     text-align: left;
+
+                    @include five {
+                        font-size: 1rem;
+                    }
 
                     @include seven {
                         padding: 0.8rem 1rem;
