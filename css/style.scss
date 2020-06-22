@@ -658,6 +658,7 @@ nav {
                     margin: 0.5rem 0.7rem;
                     position: relative;
                     box-shadow: 0 6px 9px rgba(0,0,0,0.2);
+                    cursor: pointer;
 
                     @include seven {
                         margin: 1rem;
@@ -672,7 +673,7 @@ nav {
                         height: 23rem;
 
                         @include five {
-                            height: 20rem;;
+                            height: 20rem;
                         }
                     }
 
