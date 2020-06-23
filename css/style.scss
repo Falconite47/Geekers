@@ -1,12 +1,12 @@
-@mixin seven{
+@mixin thousand-one{
     @media (max-width: 1100px) { @content};
 }
 
-@mixin res {
+@mixin eight {
     @media (max-width: 800px) {@content};
 }
 
-@mixin real-seven {
+@mixin seven {
     @media(max-width: 700px) {@content};
 }
 
@@ -14,7 +14,7 @@
     @media (max-width: 500px) {@content};
 }
   
-@mixin thousand{
+@mixin thousand-two{
     @media (max-width: 1200px) { @content};
   }
   
@@ -124,7 +124,7 @@ nav {
         transition: 0.25s ease-in-out;
         border-bottom: 2px solid rgb(240, 240, 240);
         
-        @include seven {
+        @include thousand-one {
             padding: 0 2rem;
         }
         
@@ -143,7 +143,7 @@ nav {
         background: black;
     }
     
-    @include seven {
+    @include thousand-one {
         padding: 0 2rem;           
     }
 }
@@ -268,14 +268,14 @@ nav {
    
     background: white;
 
-    @include seven {
+    @include thousand-one {
         padding:5em 0rem 3rem 0;
         flex-wrap: wrap;
         flex-direction: column;
         height:100%;
     }
 
-    @include res {
+    @include eight {
         padding: 8rem 0rem 5rem 0;
     }
 
@@ -297,7 +297,7 @@ nav {
        }
 
 
-       @include thousand {
+       @include thousand-two {
         width: 90%;
         padding: 1rem;
         height: 90%;
@@ -319,7 +319,7 @@ nav {
 
        
        
-    @include seven {
+    @include thousand-one {
         height:40%;
         width:40%;
         order:1;
@@ -335,11 +335,11 @@ nav {
         object-fit: cover;
         object-position: center center;
     
-    @include thousand {
+    @include thousand-two {
         margin: 0;
     }
                 
-    @include seven {
+    @include thousand-one {
         display: block;
         width: 100%;
         height: 100%;
@@ -361,7 +361,7 @@ nav {
         z-index: 3;
         animation: desc-hero 0.60s ease-in-out;
 
-        @include thousand{
+        @include thousand-two{
             padding: 0 0.4rem;
         }
 
@@ -375,13 +375,13 @@ nav {
             }
         }
         
-    @include seven {
+    @include thousand-one {
         order:2;
         padding:1rem 2rem 1rem 2rem;
         animation: none;
     }
 
-    @include res {
+    @include eight {
         padding: 2rem 2rem 1rem 2rem;
     }
 
@@ -405,11 +405,11 @@ nav {
                     animation: colors 0.5s ease-in-out infinite;
                 }
 
-                @include res {
+                @include eight {
                     margin-top: 1rem;
                 }
 
-                @include seven {
+                @include thousand-one {
                     display: block;
                     max-width: 100%;
                     margin-top: 0rem;
@@ -423,11 +423,11 @@ nav {
                 line-height: 65px;
                 font-weight:bold;
 
-                @include res {
+                @include eight {
                     line-height: 35px;
                 }
 
-                @include seven {
+                @include thousand-one {
                    font-size: 2rem;
                 }
             }
@@ -445,7 +445,7 @@ nav {
     align-items:center;
     position: relative;
     
-    @include seven {
+    @include thousand-one {
         flex-wrap: wrap;
         padding: 5rem 2rem;
     }
@@ -461,7 +461,7 @@ nav {
             
             &.firsts {
                 animation: first 0.75s ease-in-out;
-                    @include seven {
+                    @include thousand-one {
                        animation: none;
                     }
             }
@@ -481,7 +481,7 @@ nav {
                 font-weight:bold;
                 
 
-                @include seven {
+                @include thousand-one {
                     font-size: 2.5rem;
                 }
           
@@ -493,7 +493,7 @@ nav {
                   padding-right: 0.5rem;
                   padding-bottom: 0rem;
 
-                  @include seven {
+                  @include thousand-one {
                       font-size: 1.1rem;
                       margin-top: 0.5rem;
                       padding-bottom: 3rem;
@@ -512,7 +512,7 @@ nav {
             &.seconds{
                 animation: second 0.75s ease-in-out;
 
-                @include seven {
+                @include thousand-one {
                     animation: none;
                  }
              }
@@ -527,7 +527,7 @@ nav {
                      transform: translateX(0);
                  }
              }
-            @include seven {
+            @include thousand-one {
                width: 70%;
                padding: 0rem;
              }
@@ -568,8 +568,11 @@ nav {
 
         .card-img-top {
             height: 23rem;
-            @include res {
-                height: 30rem;
+            @include eight {
+                height: 23rem;
+            }
+            @include five {
+                height: 23rem;
             }
         }
     }
@@ -588,7 +591,7 @@ footer {
         h3 {
             font-size: 0.8rem;
             
-            @include seven {
+            @include thousand-one {
                 padding-bottom: 1rem;
             }
         }
