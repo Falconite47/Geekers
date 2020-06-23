@@ -83,10 +83,23 @@ nav {
         color: black;
 
         @include five {
-            font-size: 1.7rem;
+            font-size: 2rem;
             display: flex;
+            font-weight:500;
             align-items:center;
-            padding: 1.7rem 0 0 0;
+            padding: 1.5rem 0 0 0;
+        }
+
+        .logo {
+            width: 30px;
+            transform: rotate(10deg);
+            margin-left: 5px;
+
+            @include five {
+                width: 50px;
+                transform: rotate(0deg);
+            }
+
         }
 
     }
@@ -134,6 +147,7 @@ nav {
  .p-bar{
     opacity: 0;
     position: absolute;
+    background: blue;
     top: -5px;
     right: 0px;
     border: none;
@@ -143,14 +157,14 @@ nav {
         opacity:1;
     }
     .bars {
-        width: 2rem;
+        width: 2.1rem;
         opacity: 0;
         position: absolute;
         top:1.8rem;
         right: 30px;
         border: none;
         outline: none;
-        
+
         cursor: pointer;
         @include five {
             opacity: 1;
@@ -222,34 +236,16 @@ nav {
                     font-weight: 600;
                     transition: 0.25s ease-in-out;
                     position: relative;
-                    
-                    &:hover:before {
-                        transform: scaleX(1);
-                    }
-                    
-                    &:before {
-                        content:"";
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 3px;
-                        background: black;
-                        transform: scaleX(0);
-                        transform-origin: right;
-                        transition: 0.25s ease-in-out;
-                        
-                        @include five {
-                            background: white;
-                            text-align: center !important;
-                        }
-                        
+                  
+                    &:hover {
+                        color: #0077ff;
                     }
                     
                     @include five {
                         margin-left: 0;
                         font-size: 1.7rem;
                         color: black;
+                        font-weight: 400;
                     }
 
                     }
@@ -277,6 +273,10 @@ nav {
 
     @include res {
         padding: 8rem 0rem 5rem 0;
+    }
+
+    @include five {
+        padding: 10rem 0rem 5rem 0;
     }
 
     .front-cover {
