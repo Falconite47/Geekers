@@ -119,7 +119,7 @@ nav.navs {
   transition: 0.25s ease-in-out;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   nav.navs {
     padding: 0 2rem;
   }
@@ -133,7 +133,7 @@ nav.navs .nav-links li a:before {
   background: black;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   nav {
     padding: 0 2rem;
   }
@@ -199,7 +199,7 @@ nav.navs .nav-links li a:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-height: 100vh;
+  max-height: 80vh;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -216,7 +216,7 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .nav-links {
-    height: 100vh;
+    height: 80vh;
     max-height: 0;
     width: 100%;
     overflow: hidden;
@@ -238,7 +238,7 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .nav-links li {
-    padding: 65px 0;
+    padding: 50px 0;
     text-align: center !important;
   }
 }
@@ -286,7 +286,8 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .nav-links li a {
-    font-size: 2rem;
+    margin-left: 0;
+    font-size: 1.7rem;
     color: black;
   }
 }
@@ -309,9 +310,9 @@ nav.navs .nav-links li a:before {
   background: white;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero {
-    padding: 7rem 0rem 5rem 0;
+    padding: 5em 0rem 3rem 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -319,6 +320,12 @@ nav.navs .nav-links li a:before {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 8rem 0rem 5rem 0;
   }
 }
 
@@ -336,22 +343,23 @@ nav.navs .nav-links li a:before {
 
 @media (min-width: 1366px) {
   .hero .front-cover {
-    width: 85%;
-    height: 83%;
+    width: 90%;
+    height: 90%;
   }
 }
 
 @media (max-width: 1200px) {
   .hero .front-cover {
-    width: 70%;
-    padding: 1rem 0;
-    height: 70%;
+    width: 90%;
+    padding: 1rem;
+    height: 90%;
   }
 }
 
 @media (max-width: 500px) {
   .hero .front-cover {
-    height: 80%;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -377,12 +385,14 @@ nav.navs .nav-links li a:before {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero .front-cover {
-    height: 80%;
+    height: 40%;
+    width: 40%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    padding: 0;
     -webkit-animation: none;
             animation: none;
   }
@@ -405,7 +415,7 @@ nav.navs .nav-links li a:before {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero .front-cover img {
     display: block;
     width: 100%;
@@ -465,14 +475,20 @@ nav.navs .nav-links li a:before {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero .front-desc {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     -webkit-animation: none;
             animation: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero .front-desc {
+    padding: 2rem 2rem 1rem 2rem;
   }
 }
 
@@ -489,7 +505,7 @@ nav.navs .nav-links li a:before {
   color: white;
   border-radius: 4px;
   font-size: 1rem;
-  margin: 0.8rem 0;
+  margin: 0.3rem 0;
   cursor: pointer;
 }
 
@@ -498,11 +514,17 @@ nav.navs .nav-links li a:before {
           animation: colors 0.5s ease-in-out infinite;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
+  .hero .front-desc #abm {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1100px) {
   .hero .front-desc #abm {
     display: block;
     max-width: 100%;
-    margin-top: 1rem;
+    margin-top: 0rem;
     padding: 0.8rem 0;
   }
 }
@@ -513,13 +535,13 @@ nav.navs .nav-links li a:before {
   font-weight: bold;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .hero .front-desc h2 {
     line-height: 35px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero .front-desc h2 {
     font-size: 2rem;
   }
@@ -544,7 +566,7 @@ nav.navs .nav-links li a:before {
   position: relative;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -563,7 +585,7 @@ nav.navs .nav-links li a:before {
           animation: first 0.75s ease-in-out;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about .text.firsts {
     -webkit-animation: none;
             animation: none;
@@ -598,7 +620,7 @@ nav.navs .nav-links li a:before {
   font-weight: bold;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about .text h2 {
     font-size: 2.5rem;
   }
@@ -610,7 +632,7 @@ nav.navs .nav-links li a:before {
   padding-bottom: 0rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about .text p {
     font-size: 1.1rem;
     margin-top: 0.5rem;
@@ -633,7 +655,7 @@ nav.navs .nav-links li a:before {
           animation: second 0.75s ease-in-out;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about .pic.seconds {
     -webkit-animation: none;
             animation: none;
@@ -666,7 +688,7 @@ nav.navs .nav-links li a:before {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .about .pic {
     width: 70%;
     padding: 0rem;
@@ -731,7 +753,7 @@ footer h3 {
   font-size: 0.8rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   footer h3 {
     padding-bottom: 1rem;
   }
