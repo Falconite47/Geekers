@@ -144,6 +144,8 @@ nav.navs .nav-links li a:before {
   position: absolute;
   top: -5px;
   right: 0px;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 500px) {
@@ -158,6 +160,8 @@ nav.navs .nav-links li a:before {
   position: absolute;
   top: 1.8rem;
   right: 30px;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 

@@ -136,6 +136,9 @@ nav {
     position: absolute;
     top: -5px;
     right: 0px;
+    border: none;
+    outline: none;
+
     @include five {
         opacity:1;
     }
@@ -145,6 +148,9 @@ nav {
         position: absolute;
         top:1.8rem;
         right: 30px;
+        border: none;
+        outline: none;
+        
         cursor: pointer;
         @include five {
             opacity: 1;
