@@ -8,8 +8,7 @@
     <title>Geekers | Brands made easy</title>
 </head>
 <body>
-
-    <nav>
+    <nav id="navbar">
         <h2 class="title">Geekers</h2>                  
         <button type="button" class="p-bar"><img class="bars" id="bar" src="img/open-menu.png" alt=""></button>
         <ul class="nav-links" id="menu">
@@ -74,15 +73,13 @@
                   </div>
               </div>
           </div>
-   
-    </section>
-
-    <footer>
-        <h3>&copy; Copyright 2020 Geekers. All rights reserved. </h3>
-    </footer>
+        </section>
+        
+        <footer>
+            <h3>&copy; Copyright 2020 Geekers. All rights reserved. </h3>
+        </footer>
 
     <script>
-const nav = document.querySelector('nav');
 const first = document.querySelector('#first-anim');
 const second = document.querySelector('#second-anim');
 const title = document.querySelector('#best-title');
@@ -91,6 +88,21 @@ const box2 = document.querySelector('#second-box');
 const box3 = document.querySelector('#third-box');
 const menu = document.querySelector('.nav-links');
 const bars = document.querySelector('.p-bar');
+    let lastScrollTop = 0;
+    const nav = document.querySelector("#navbar");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            nav.style.top = "-85px";
+             menu.classList.add('closenav');
+        } else {
+            nav.style.top = "0px";
+             menu.classList.remove('closenav');
+        }
+        lastScrollTop = scrollTop;
+
+    })
 
 bars.addEventListener('click', ()=>{
     menu.classList.toggle('idknav');

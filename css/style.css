@@ -15,6 +15,14 @@ img {
   vertical-align: middle;
 }
 
+.smooth-scroll-wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -49,8 +57,8 @@ nav {
   -webkit-transition: 0.20s ease-in-out;
   transition: 0.20s ease-in-out;
   z-index: 10;
-  -webkit-animation: navss ease-in-out 0.5s;
-          animation: navss ease-in-out 0.5s;
+  color: black;
+  background: white;
 }
 
 nav .title {
@@ -64,12 +72,12 @@ nav .title {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem 0  0 0;
+  color: black;
 }
 
 @media (max-width: 500px) {
   nav .title {
     font-size: 1.7rem;
-    line-height: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,49 +88,10 @@ nav .title {
   }
 }
 
-@-webkit-keyframes navss {
-  0% {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  70% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
-  }
-  80% {
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@keyframes navss {
-  0% {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  70% {
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
-  }
-  80% {
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
 @media (max-width: 500px) {
   nav {
-    background: -webkit-gradient(linear, left top, right top, from(#0057fa), to(#0077ff));
-    background: linear-gradient(90deg, #0057fa, #0077ff);
-    color: white;
+    background: white;
+    color: black;
     -webkit-animation: none;
             animation: none;
     display: -webkit-box;
@@ -141,11 +110,13 @@ nav .title {
 }
 
 nav.navs {
-  background: -webkit-gradient(linear, left top, right top, from(#0057fa), to(#0077ff));
-  background: linear-gradient(90deg, #0057fa, #0077ff);
-  padding: 0rem 2.5rem;
+  background: white;
+  padding: 0rem 4rem;
+  color: black;
   -webkit-box-shadow: 0 3px 11px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 11px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 @media (max-width: 1000px) {
@@ -155,11 +126,11 @@ nav.navs {
 }
 
 nav.navs .title, nav.navs .nav-links li a {
-  color: white;
+  color: black;
 }
 
 nav.navs .nav-links li a:before {
-  background: white;
+  background: black;
 }
 
 @media (max-width: 1000px) {
@@ -185,7 +156,7 @@ nav.navs .nav-links li a:before {
   width: 2rem;
   opacity: 0;
   position: absolute;
-  top: 1.1rem;
+  top: 1.8rem;
   right: 30px;
   cursor: pointer;
 }
@@ -205,34 +176,47 @@ nav.navs .nav-links li a:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0 0 0;
+  padding: 0 0 0 0;
+  margin: 0rem 0 0 0;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
   .nav-links {
     font-size: 0.9rem;
-    padding: 0 0 0 0;
+    color: black;
+    padding: 1rem 0 0 0;
   }
 }
 
 .nav-links.idknav {
-  padding-top: 0rem;
+  margin-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-height: 60vh;
+  max-height: 100vh;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
+@media (min-width: 1366px) {
+  .nav-links.idknav {
+    max-height: 0;
+  }
+}
+
+.nav-links.closenav {
+  max-height: 0;
+}
+
 @media (max-width: 500px) {
   .nav-links {
-    height: 60vh;
+    height: 100vh;
     max-height: 0;
     width: 100%;
     overflow: hidden;
@@ -254,7 +238,7 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .nav-links li {
-    padding: 40px 0;
+    padding: 65px 0;
     text-align: center !important;
   }
 }
@@ -302,8 +286,8 @@ nav.navs .nav-links li a:before {
 
 @media (max-width: 500px) {
   .nav-links li a {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 2rem;
+    color: black;
   }
 }
 

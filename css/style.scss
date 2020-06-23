@@ -34,6 +34,13 @@ img {
     vertical-align: middle;
 }
 
+.smooth-scroll-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -59,7 +66,8 @@ nav {
     min-height: 10vh;
     transition: 0.20s ease-in-out;
     z-index: 10;
-    animation: navss ease-in-out 0.5s;
+    color: black;
+    background: white;
         
     .title {
         z-index: 1;
@@ -68,10 +76,10 @@ nav {
         display: flex;
         align-items:center;
         padding: 0.5rem 0  0 0;
+        color: black;
 
         @include five {
             font-size: 1.7rem;
-            line-height: 0px;
             display: flex;
             align-items:center;
             padding: 1.7rem 0 0 0;
@@ -79,24 +87,10 @@ nav {
 
     }
     
-    @keyframes navss {
-        0%{
-            transform: translateY(-50%);
-        }
-        70%{
-            transform: translateY(5%);
-        }
-        80%{
-            transform: translateY(-5%);
-        }
-        100%{
-            transform: translateY(0%);
-        }
-    }
     
     @include five {
-        background: linear-gradient(90deg,#0057fa,#0077ff);
-        color: white;
+        background: white;
+        color: black;
         animation: none;
         display: flex;
         justify-content: flex-start;
@@ -108,9 +102,11 @@ nav {
 
 
     &.navs{
-        background: linear-gradient(90deg,#0057fa,#0077ff);
-        padding: 0rem 2.5rem;
+        background:white;
+        padding: 0rem 4rem;
+        color: black;
         box-shadow: 0 3px 11px rgba(0,0,0,0.3);
+        transition: 0.25s ease-in-out;
         
         @include seven {
             padding: 0 2rem;
@@ -118,11 +114,11 @@ nav {
     }
     
     &.navs .title, &.navs .nav-links li a{
-        color: white;
+        color: black;
     }
 
     &.navs .nav-links li a:before {
-        background: white;
+        background: black;
     }
     
     @include seven {
@@ -143,7 +139,7 @@ nav {
         width: 2rem;
         opacity: 0;
         position: absolute;
-        top: 1.1rem;
+        top:1.8rem;
         right: 30px;
         cursor: pointer;
         @include five {
@@ -158,23 +154,35 @@ nav {
     display: flex;
     list-style: none;
     align-items:center;
-    padding: 1rem 0 0 0;
+    padding: 0 0 0 0;
+    margin: 0rem 0 0 0;
     transition:0.25s ease-in-out;
+    text-align: center;
+
     @include five{
         font-size: 0.9rem;
-        padding: 0 0 0 0;
+        color: black;
+        padding: 1rem 0 0 0;
     }
     
     &.idknav{
-            padding-top: 0rem;
+            margin-top: 0;
             display: flex;
             align-items:center;
-            max-height:60vh;
+            max-height:100vh;
             transition:0.25s ease-in-out;
+
+            @include desktop {
+                max-height: 0;
+            }
+    }
+
+    &.closenav {
+        max-height: 0;
     }
 
     @include five{
-        height: 60vh;
+        height:100vh;
         max-height: 0;
         width: 100%;
         overflow: hidden;
@@ -188,7 +196,7 @@ nav {
             
             li{
                 @include five { 
-                    padding: 40px 0;
+                    padding:65px 0;
                     text-align: center !important;    
                 }
                 
@@ -229,8 +237,8 @@ nav {
                     }
                     
                     @include five {
-                        font-size: 1.5rem;
-                        color: white;
+                        font-size: 2rem;
+                        color: black;
                     }
 
                     }
