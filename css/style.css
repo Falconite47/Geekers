@@ -85,22 +85,20 @@ nav .title {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
   }
 }
 
 nav .title .logo {
   width: 30px;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
   margin-left: 5px;
 }
 
 @media (max-width: 500px) {
   nav .title .logo {
     width: 50px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
   }
 }
 
@@ -129,8 +127,8 @@ nav.navs {
   background: white;
   padding: 0rem 4rem;
   color: black;
-  -webkit-box-shadow: 0 3px 11px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 11px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -158,8 +156,7 @@ nav.navs .nav-links li a:before {
 .p-bar {
   opacity: 0;
   position: absolute;
-  background: blue;
-  top: -5px;
+  top: 0px;
   right: 0px;
   border: none;
   outline: none;
@@ -175,7 +172,7 @@ nav.navs .nav-links li a:before {
   width: 2.1rem;
   opacity: 0;
   position: absolute;
-  top: 1.8rem;
+  top: 1.2rem;
   right: 30px;
   border: none;
   outline: none;
